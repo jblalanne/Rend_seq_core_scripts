@@ -11,7 +11,7 @@ To obtain the raw Rend-seq wig, run:
 ```
 python align_to_wig_20180130.py my_align_file.align my_wigs my_wig_chrom_name
 ```
-The above command will generate four wig files: my_wigs_3f.wig, my_wigs_3r.wig, my_wigs_5f.wig, and my_wigs_5r.wig. These respectively correspond to the read counts for the 3' end of mapped reads on the forward strand, 3' end of mapped reads on the reverse strand, 5' end of mapped reads on the forward strand, and 5' end of mapped reads on the reverse strand. Each wig file will have as header
+The above command will generate four wig files: `my_wigs_3f.wig`, `my_wigs_3r.wig`, `my_wigs_5f.wig`, and `my_wigs_5r.wig`. These respectively correspond to the read counts for the 3' end of mapped reads on the forward strand, 3' end of mapped reads on the reverse strand, 5' end of mapped reads on the forward strand, and 5' end of mapped reads on the reverse strand. Each wig file will have as header
 ```
 track type=wiggle_0
 variableStep chrom=my_wig_chrom_name

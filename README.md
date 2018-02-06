@@ -16,7 +16,7 @@ The above command will generate four wig files: `my_wigs_3f.wig`, `my_wigs_3r.wi
 track type=wiggle_0
 variableStep chrom=my_wig_chrom_name
 ```
-In the above command, my_align_file.align is the standard bowtie align file (typically with -v 1 -k 1, or -v 1 -m 2 -k 2 options, the above script assumes at most two alignments are reported, or option -k is less than or equal to 2). Refer to the [bowtie manual](http://bowtie-bio.sourceforge.net/manual.shtml) for details.  
+In the above command, `my_align_file.align` is the standard bowtie align file (typically with -v 1 -k 1, or -v 1 -m 2 -k 2 options, the above script assumes at most two alignments are reported, or option -k is less than or equal to 2). Refer to the [bowtie manual](http://bowtie-bio.sourceforge.net/manual.shtml) for details.  
 
 The generated wig files can be used for data visualization in a genome browser, such as [MochiView](http://www.johnsonlab.ucsf.edu/mochi/).
 

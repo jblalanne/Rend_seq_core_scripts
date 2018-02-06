@@ -186,17 +186,6 @@ def writeOutput_wig(dictionary,File_name,chrom_name):
     outFile = open(File_name, 'w')
     outFile.write('track type=wiggle_0\n')
     outFile.write('variableStep chrom='+chrom_name+'\n')
-    
-    #if species=='bsub':
-    #    outFile.write('variableStep chrom=NC_000964.3\n')
-    #elif species=='ecoli':
-    #    outFile.write('variableStep chrom=NC_000913_2\n')
-    #elif species=='vnat1':
-    #    outFile.write('variableStep chrom=CP009977.1\n')
-    #elif species=='vnat2':
-    #    outFile.write('variableStep chrom=CP009978.1\n')
-    #elif species=='caulobacter':
-    #    outFile.write('variableStep chrom=CP001340.1\n')
         
     for y in dictionary:
         position = str(y[0])

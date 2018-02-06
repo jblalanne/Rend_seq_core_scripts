@@ -25,7 +25,7 @@ The raw wig files generated above can be used to identify peaks in the reads cou
 
 The MATLAB script `Rend_seq_end_enrichment_file_header_20180206.m` contains an example (using Rend-seq data from exponentially growing *Bacillus subtilis* in LB, whose raw wigs are included in this repository). To use the MATLAB scripts, download all MATLAB files from this submission and add the directory (and sub-directories) containing these files to the MATLAB path (or run the script from the directory containing these files). You will have to change variable `data_dir` to the full path to the directory containing the wig files. 
 
-`Rend_seq_end_enrichment_file_header_20180206.m` first imports the data in MATLAB, then computes the peak z score and identify peaks, and then generates the end-enrichment file (which contains peak type (3f, 3r, 5f or 5r), position, and end-enrichment). This file can then be used to generate the shadow removed wig. See script comments and Methods of the associated publication for details.
+`Rend_seq_end_enrichment_file_header_20180206.m` first imports the data in MATLAB, then computes the peak z score and identify peaks, and then generates the end-enrichment file (which contains peak type (3f, 3r, 5f or 5r), position, and end-enrichment). For example included, the file generated will be `Bacillus_subtilis_WT_Rend_seq_LB_25s_frag_pooled_end_enrichment_shadow_removal.txt`. This file can then be used to generate the shadow removed wig. See script comments and Methods of the associated publication for details.
 
 Any peak missed by the automated identification (e.g., if a 3' end has 3 to 5 different possible neighboring positions) will not have its shadow removed. To also remove the shadow of a spuriously missed peak (by the automated analysis), information can be added to the end-enrichment file manually. 
 
@@ -33,7 +33,7 @@ Any peak missed by the automated identification (e.g., if a 3' end has 3 to 5 di
 
 The end-enrichment file (see above) and the original align file can then be used to generate shadow removed wig files. To do so, run:
 ```
-python align_to_wig_no_shadow_20180130.py my_align_file.align my_wigs_no_shadow my_end_enrichment_file.txt my_wig_chrom_name
+python align_to_wig_no_shadow_20180130.py my_align_file.align my_wigs_no_shadow my_file_end_enrichment_shadow_removal.txt my_wig_chrom_name
 ```
 This is similar to the script used for the raw wig file generation, except that now the end-enrichment file (described above) is also required. This script generates four wig files (similar as before): my_wigs_no_shadow_3f.wig, my_wigs_no_shadow_3r.wig, my_wigs_no_shadow_5f.wig, and my_wigs_no_shadow_5r.wig. 
 

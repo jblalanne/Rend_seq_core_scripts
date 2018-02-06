@@ -38,7 +38,7 @@ python align_to_wig_no_shadow_20180130.py my_align_file.align my_wigs_no_shadow 
 This is similar to the script used for the raw wig file generation, except that now the end-enrichment file (described above) is also required. This script generates four wig files (similar as before): `my_wigs_no_shadow_3f.wig`, `my_wigs_no_shadow_3r.wig`, `my_wigs_no_shadow_5f.wig`, and `my_wigs_no_shadow_5r.wig`. 
 
 
-## mRNA isoforms display and quantification
+## mRNA isoforms identification, quantificaiton and display
 
 mRNA isoforms from complex operons can be identified and quantified from the shadow removed wigs (the scripts also works with raw wig files). The MATLAB script `Rend_seq_isoform_header_20180130.m` contains working examples and can easily be modified to display any region of interest. It uses shadow removed wig files from *Bacillus subtilis* included [example_data](https://github.com/jblalanne/Rend_seq_core_scripts/tree/master/example_data). It also requires a GenBank annotation file (obtained for a genome of interest by downloading coding sequences in the FASTA Protein format). That of [*Bacillus subtilis*](https://www.ncbi.nlm.nih.gov/nuccore/NC_000964) (`NC_000964.3.faa`) is included in [example_data](https://github.com/jblalanne/Rend_seq_core_scripts/tree/master/example_data). 
 
